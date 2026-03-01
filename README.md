@@ -39,16 +39,18 @@ If it can’t be reproduced, it’s a note—not a release.
 
 ---
 
-## Where to find things
+## Artifact index
 
-- **Published homepage:** `index.html`
-- **Published experiment pages:** `/experiments/`
-- **Published article pages:** `/articles/`
-- **Published notebook pages:** `/notebooks/`
-- **Content sources:** `/content/experiments/` and `/content/articles/`
-- **Python notebooks:** `/notebooks/*.ipynb`
-- **Build script:** `scripts/build.mjs`
-- **Static assets:** `/assets/`
+| Artifact | Published / Source | Purpose |
+| --- | --- | --- |
+| Homepage | `index.html` | Main landing page for the public site |
+| Experiments | `/experiments/` | Published experiment logs and experiment detail pages |
+| Articles | `/articles/` | Published writeups derived from original work |
+| Python notebooks | `/notebooks/` and `/notebooks/*.ipynb` | Published notebook pages plus raw Jupyter notebooks |
+| Models / datasets / collections | `https://huggingface.co/appliedomodels` | External home for model assets, datasets, and collections |
+| Content sources | `/content/experiments/`, `/content/articles/`, `/content/about.md` | Markdown source files used to generate the site |
+| Build system | `scripts/build.mjs` | Static site generator for HTML pages |
+| Static assets | `/assets/` | Shared CSS, favicon, and other site assets |
 
 ---
 
@@ -89,6 +91,11 @@ npm run preview
 
 ## GitHub Pages (custom domain)
 
-This repo should be published via **Settings → Pages** (Deploy from branch: `main` / root).
+This repo is set up to publish via **GitHub Actions** using:
 
-GitHub will create/maintain the `CNAME` file when you set the custom domain in Pages settings.
+- `.github/workflows/deploy-pages.yml`
+
+In GitHub:
+
+- **Settings → Pages → Source** should be set to **GitHub Actions**
+- set the custom domain later in **Settings → Pages** when DNS is ready
