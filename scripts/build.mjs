@@ -631,7 +631,7 @@ async function buildCollectionIndexes(experiments, articles, notebooks) {
     path.join(articlesOutputDir, "index.html"),
     renderCollectionPage({
       title: "Articles",
-      intro: "Original writeups derived from hands-on experiments, implementation, and measurement.",
+      intro: "Writeups from hands-on experiments, implementation, and direct measurement.",
       entries: articles,
       depth: 1,
       active: "articles",

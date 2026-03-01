@@ -6,16 +6,12 @@ kind: Working note
 ---
 ## Publication Standard
 
-Applied Models publishes original work only.
-
-That means:
+Every release is something run and measured here:
 
 - experiments designed and run here
 - implementations built directly from the problem
 - observations from first-hand runs
 - failures recorded honestly
-
-Not summaries of papers, not repackaged blog posts, not passive study notes.
 
 ## The Unit of Progress
 

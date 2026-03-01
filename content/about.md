@@ -39,7 +39,7 @@ Where do retrieval-augmented generation, structured output, and constrained deco
 
 ## What Gets Published
 
-**Traceable results** Every finding links back to a run done here. Original implementation, not reproduced from paper.
+**Traceable results** Every finding links back to a run done here.
 
 **Reproducible method** Clear enough that someone else could replicate it with the same setup.
 
@@ -68,4 +68,4 @@ Public model assets: [appliedomodels on Hugging Face](https://huggingface.co/app
 
 ## Publication Boundary
 
-Every release comes from original experiments, direct implementation, and first-hand observation. Not summaries of papers, not passive learning notes.
+Every release comes from direct implementation and first-hand observation.
