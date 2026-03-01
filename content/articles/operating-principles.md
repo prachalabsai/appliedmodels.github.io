@@ -1,55 +1,57 @@
 ---
 title: Operating Principles for Applied Models
 date: 2026-02-28
-summary: The project runs on small, hypothesis-driven experiments, original records of work, and continuous forward motion instead of SOTA chasing.
+summary: How Applied Models decides what to publish, what counts as a valid result, and what the research record is for.
 kind: Working note
 ---
-## The Main Rule
+## Publication Standard
 
-Applied Models only publishes original work from this project.
+Applied Models publishes original work only.
 
 That means:
 
-- original experiments
-- original implementations
-- original observations
-- original failures
+- experiments this lab designed and ran
+- implementations built directly from the problem
+- observations made from first-hand runs
+- failures recorded honestly
 
-It does not exist to collect learning notes or summarize someone else's blog, paper, or thread.
+This lab does not summarize papers, repackage blog posts, or publish passive study notes.
 
 ## The Unit of Progress
 
-The smallest useful unit of progress is:
+The smallest releasable unit of work is:
 
-1. one specific hypothesis
-2. a handful of key questions
-3. one focused experiment
-4. one honest publication
+1. one falsifiable hypothesis
+2. a set of concrete evaluation questions
+3. one focused experiment designed to test it
+4. one honest record of what happened
 
-This keeps the scope realistic and prevents work from stalling in planning.
+This unit keeps scope realistic and prevents work from stalling in indefinite planning.
 
-## SOTA Is Not the Requirement
+## Independence Over Prestige
 
 The goal is not to publish only when the result is state of the art.
 
-For an independent researcher, that standard is too expensive as a default operating mode and can freeze progress completely.
+For an independent lab, that bar is the wrong default. It is expensive, slow, and often freezes progress entirely.
 
 What matters more:
 
-- the experiment is real
-- the method is clear
-- the result is recorded honestly
-- the work compounds over time
+- the experiment is real and traceable
+- the method is clear enough to replicate
+- the result is recorded without spin
+- the work builds on itself over time
 
-## Failed Experiments Still Matter
+A lab that only publishes wins is not keeping an honest record.
 
-A failed experiment can still be useful if it tells the truth.
+## Failure Is Part of the Record
 
-An inconclusive run, a weak baseline, or a broken setup can still reveal:
+A failed experiment can still be valuable if it tells the truth.
 
-- a bad assumption
-- a design flaw
-- a blind spot in the model
-- a better next step
+An inconclusive run, a weak baseline, or a broken setup reveals:
 
-The point is not to make every result impressive. The point is to maintain a real research record.
+- a bad prior assumption
+- a flaw in the experimental design
+- a behavior the model does not have
+- a better direction for the next experiment
+
+The research record is not a highlight reel. It is a log of what actually happened.

@@ -1,58 +1,59 @@
 # Applied Models
 
-Applied Models is a public, lightweight lab for empirical science and applied research on generative models.
+Applied Models is a public home for empirical science and applied research on generative models.
 
-The focus is simple: work directly with the model, run real experiments, and publish original findings.
+The work is direct: choose a model, frame a falsifiable hypothesis, run a real experiment, publish what happened.
 
-## What This Site Publishes
+## Research Directions
 
-- focused experiments driven by a clear hypothesis
-- original articles based on real implementation and measurement
-- Python notebooks tied to experiments and practical model work
+**Alignment Science & Interpretability**
+Probing model behavior, tracing how post-training shapes alignment, and studying model biology and dynamics — what happens inside the model across layers, training stages, and capability transitions.
+
+**Model Anatomy & Components**
+Structural analysis of generative models: attention mechanisms, embedding geometry, activation patterns, and how architectural components compose into observed behavior.
+
+**Evaluation**
+Hypothesis-driven eval suites for capabilities, failure modes, and behavioral consistency. The first experiments run on Gemma — small, open, and well-suited for controlled work.
+
+**Industry & Creative Applications**
+How generative models perform in applied settings: retrieval, structured generation, constrained output, and tasks with measurable real-world outcomes.
+
+## What This Project Publishes
+
+- hypothesis-driven experiments with clear evaluation criteria
+- original articles grounded in direct implementation and measurement
+- Python notebooks that make experiments reproducible and executable
 
 ## What Matters Here
 
 - evidence over commentary
-- original work over summaries
-- clarity over hype
-- steady progress over state-of-the-art posturing
+- original implementation over second-hand summary
+- reproducibility over impressiveness
+- steady compounding over benchmark chasing
 
-## Operating Standard
+## Reproducibility Standard
 
-The default unit of work is small and concrete:
+Every released artifact should be reproducible by someone else. That means:
 
-1. Choose a model.
-2. Define one specific hypothesis.
-3. Run a focused experiment.
-4. Publish what happened.
+- a clear method with enough detail to replicate
+- evaluation criteria set before running
+- failure modes and limitations documented
+- code, configs, or prompts made available
 
-Not every result needs to be impressive. Failed or partial experiments still matter if they are real and documented honestly.
+If it can't be reproduced, it's a note — not a release.
 
-## Scope
+## Behind the Work
 
-Applied Models covers hands-on work such as:
-
-- benchmarking and validation
-- interpretability and alignment analysis
-- post-training and fine-tuning
-- model anatomy and behavior analysis
-- constrained implementations and from-scratch builds
-
-## Behind This Initiative
-
-Applied Models is led by the person behind:
-
-- [Prachalabs.com](https://prachalabs.com)
-- [Pracha.me](https://pracha.me)
+Applied Models is led by the researcher behind [Prachalabs.com](https://prachalabs.com) and [Pracha.me](https://pracha.me).
 
 ## Models, Datasets, and Collections
 
-Most public model assets for this project live in the Hugging Face organization:
+Public model assets live in the Hugging Face organization:
 
 - [appliedomodels on Hugging Face](https://huggingface.co/appliedomodels)
 
-## Editorial Boundary
+## Publication Boundary
 
-This site is not for passive learning notes or second-hand summaries of other people's work.
+This project does not publish passive learning notes or summaries of other people's work.
 
-Published content should come from original experiments, implementation, and direct observation.
+Every release comes from original experiments, direct implementation, and first-hand observation.
