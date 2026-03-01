@@ -551,80 +551,45 @@ async function buildHomePage(experiments, articles, notebooks) {
       <div class="hero-layout">
         <div class="hero-copy">
           <p class="eyebrow">Empirical Science and Applied Research on Generative Models</p>
-          <h1>Hypothesis-driven experiments on generative models.</h1>
+          <h1>Experiments on the open questions in generative models.</h1>
           <p class="lede">
-            Applied Models is a public home for hands-on experiments on generative models — across fundamentals,
-            interpretability, alignment science, post-training, RL, evals, and industry applications.
-            Each release starts with one hypothesis, one focused experiment, and one honest record.
+            The most important questions about generative models are still open — what post-training actually
+            changes inside the model, when alignment holds under pressure, whether RL improves reasoning
+            or just its appearance. Applied Models runs focused experiments to find out.
           </p>
           <div class="hero-actions">
             <a class="button-primary" href="experiments/index.html">See experiments</a>
             <a class="button-secondary" href="about.html">About</a>
           </div>
           <div class="signal-bar">
-            <span>Falsifiable hypothesis</span>
-            <span>Reproducible experiment</span>
+            <span>Specific question</span>
+            <span>Controlled experiment</span>
             <span>Honest record</span>
           </div>
           <p class="hero-statement">
-            The goal is a running record of real experiments — not curated highlights, not tutorials, not opinion.
-            What the model does under specific conditions, measured and documented as precisely as possible.
-            Work compounds. The record stays public. Seven directions, one experiment at a time.
+            The model landscape is moving faster than our understanding of it.
+            That gap is the work. Seven directions, each with concrete questions worth pursuing precisely —
+            and enough control over the experimental setup to actually answer them.
+          </p>
+          <p class="hero-note-link">
+            Models and datasets:
+            <a href="${huggingFaceOrgUrl}" target="_blank" rel="noreferrer">Hugging Face organization</a>
           </p>
         </div>
         <aside class="hero-rail" aria-label="Applied Models at a glance">
           <section class="hero-note">
             <p class="eyebrow">Research Directions</p>
             <ul class="stack-list">
-              <li><strong>Fundamentals</strong><span>Architecture, training dynamics, and scaling from first principles.</span></li>
-              <li><strong>Interpretability</strong><span>Circuits, probing, and what the model has actually learned.</span></li>
-              <li><strong>Alignment Science</strong><span>Behavioral alignment, safety tradeoffs, and value consistency.</span></li>
-              <li><strong>Post Training</strong><span>Fine-tuning, DPO, distillation, and instruction tuning.</span></li>
-              <li><strong>RL</strong><span>RLHF, GRPO, process reward models, and reasoning via RL.</span></li>
-              <li><strong>Evals</strong><span>Capability and failure mode probing. Starting with Gemma.</span></li>
-              <li><strong>Industry &amp; Enterprise</strong><span>Retrieval, structured generation, and deployment patterns.</span></li>
+              <li><strong>Fundamentals</strong><span>How do architecture and training dynamics produce the behaviors we observe at scale?</span></li>
+              <li><strong>Interpretability</strong><span>Which circuits drive specific behaviors, and can they be precisely identified and edited?</span></li>
+              <li><strong>Alignment Science</strong><span>When does alignment hold under pressure, and how does it degrade?</span></li>
+              <li><strong>Post Training</strong><span>What does each training stage actually change — model behavior, or internal representations?</span></li>
+              <li><strong>RL</strong><span>Does RL genuinely improve reasoning, or does it optimize for the appearance of it?</span></li>
+              <li><strong>Evals</strong><span>What would a rigorous, falsifiable eval of model capability actually require?</span></li>
+              <li><strong>Industry &amp; Enterprise</strong><span>Where do retrieval, structured generation, and constrained output reliably break?</span></li>
             </ul>
-            <p class="hero-note-link">
-              External assets:
-              <a href="${huggingFaceOrgUrl}" target="_blank" rel="noreferrer">Hugging Face organization</a>
-            </p>
-          </section>
-          <section class="hero-note hero-note-strong">
-            <p class="eyebrow">Release Pattern</p>
-            <div class="hero-flow">
-              <span>Hypothesis</span>
-              <span>Experiment</span>
-              <span>Record</span>
-            </div>
-            <div class="hero-mini-grid">
-              <div class="mini-metric"><span>Mode</span><strong>Empirical</strong></div>
-              <div class="mini-metric"><span>Bias</span><strong>Clarity</strong></div>
-              <div class="mini-metric"><span>Cadence</span><strong>Continuous</strong></div>
-              <div class="mini-metric"><span>Standard</span><strong>Reproducible</strong></div>
-            </div>
           </section>
         </aside>
-      </div>
-    </section>
-
-    <section class="split-panel">
-      <div class="panel">
-        <p class="eyebrow">How Work Gets Done</p>
-        <ul class="stack-list">
-          <li><strong>Choose</strong><span>Select one model or configuration to study.</span></li>
-          <li><strong>Define</strong><span>Frame a single falsifiable hypothesis with concrete evaluation criteria.</span></li>
-          <li><strong>Run</strong><span>Execute the smallest experiment that yields real evidence.</span></li>
-          <li><strong>Publish</strong><span>Record what happened — method, result, and failure modes.</span></li>
-        </ul>
-      </div>
-      <div class="panel">
-        <p class="eyebrow">Publication Boundary</p>
-        <ul class="stack-list">
-          <li><strong>No survey pieces</strong><span>Published work comes from direct implementation, not literature review.</span></li>
-          <li><strong>No second-hand summaries</strong><span>Don&apos;t repackage others&apos; results as findings.</span></li>
-          <li><strong>Original only</strong><span>Every claim traces to an experiment run here.</span></li>
-          <li><strong>Keep compounding</strong><span>Forward progress beats chasing benchmark headlines.</span></li>
-        </ul>
       </div>
     </section>
 
@@ -640,7 +605,7 @@ async function buildHomePage(experiments, articles, notebooks) {
     path.join(rootDir, "index.html"),
     pageLayout({
       title: "",
-      description: "An independent lab running hypothesis-driven, reproducible experiments on generative models.",
+      description: "Focused experiments on how generative models actually behave — across fundamentals, interpretability, alignment, RL, and applied AI.",
       body,
       depth: 0,
       active: "home",

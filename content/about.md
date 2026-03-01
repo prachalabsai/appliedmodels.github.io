@@ -2,43 +2,50 @@
 
 Applied Models is a public home for empirical science and applied research on generative models.
 
-The work is direct: choose a model, frame a falsifiable hypothesis, run a real experiment, publish what happened.
+The most important questions about generative models are still open. This is the work of finding out — direction by direction, experiment by experiment.
 
 ## Research Directions
 
 **Fundamentals**
-Architecture, training dynamics, scaling behavior, and model internals studied from first principles.
+How do architecture choices and training dynamics produce the behaviors we observe at scale? Starting from model internals, not from benchmark scores.
 
 **Interpretability**
-Mechanistic analysis of what models learn: circuits, probing, attention patterns, embedding geometry, and feature attribution.
+Which circuits drive specific model behaviors, and can they be precisely identified and edited? Mechanistic analysis of what models actually learn, not just what they output.
 
 **Alignment Science**
-Behavioral alignment, value consistency across contexts, safety tradeoffs, and how alignment properties shift with training.
+When does alignment hold under distribution shift and pressure, and how does it degrade? Behavioral consistency studied empirically across contexts.
 
 **Post Training**
-Fine-tuning, instruction tuning, DPO, ORPO, distillation, and the behavioral effects of each training stage.
+What does each training stage — fine-tuning, DPO, distillation — actually change inside the model? Behavior, or internal representations?
 
 **RL**
-Reinforcement learning for language models: RLHF, GRPO, PPO, process reward models, and reasoning elicited via RL.
+Does RL genuinely improve reasoning, or does it optimize for the appearance of reasoning? RLHF, GRPO, and process reward models studied from outcome to mechanism.
 
 **Evals**
-Hypothesis-driven eval suites for capabilities, failure modes, and behavioral consistency. The first experiments run on Gemma.
+What would a rigorous, falsifiable eval of model capability actually require? Hypothesis-driven suites for capabilities, failure modes, and behavioral consistency. Starting with Gemma.
 
 **Industry & Enterprise**
-How generative models perform in applied settings: retrieval, structured generation, constrained output, and real deployment patterns.
+Where do retrieval-augmented generation, structured output, and constrained decoding reliably break — and what can be done about it?
 
-## What This Project Publishes
+## Why These Questions
 
-- hypothesis-driven experiments with clear evaluation criteria
-- original articles grounded in direct implementation and measurement
-- Python notebooks that make experiments reproducible and executable
+**Genuine unknowns** Every experiment starts with something that doesn't have a clear answer yet — not a demonstration of what works.
 
-## What Matters Here
+**Narrow enough to test** One model, one configuration, one measurable outcome. Small scope makes real answers possible.
 
-- evidence over commentary
-- original implementation over second-hand summary
-- reproducibility over impressiveness
-- steady compounding over benchmark chasing
+**Empirical first** What the model actually does under specific conditions — not what theory predicts.
+
+**Compounding record** Seven directions, accumulating real evidence over time. The record stays public.
+
+## What Gets Published
+
+**Traceable results** Every finding links back to a run done here. Original implementation, not reproduced from paper.
+
+**Reproducible method** Clear enough that someone else could replicate it with the same setup.
+
+**Honest failure** Inconclusive runs and broken setups documented, not hidden. The record is not a highlight reel.
+
+**No repackaging** Every claim traces to a run done here, not to someone else's paper.
 
 ## Reproducibility Standard
 
@@ -55,14 +62,10 @@ If it can't be reproduced, it's a note — not a release.
 
 Applied Models is led by the builder behind [Prachalabs.com](https://prachalabs.com) and [Pracha.me](https://pracha.me).
 
-## Models, Datasets, and Collections
+## Models and Datasets
 
-Public model assets live in the Hugging Face organization:
-
-- [appliedomodels on Hugging Face](https://huggingface.co/appliedomodels)
+Public model assets: [appliedomodels on Hugging Face](https://huggingface.co/appliedomodels)
 
 ## Publication Boundary
 
-This project does not publish passive learning notes or summaries of other people's work.
-
-Every release comes from original experiments, direct implementation, and first-hand observation.
+Every release comes from original experiments, direct implementation, and first-hand observation. Not summaries of papers, not passive learning notes.

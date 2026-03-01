@@ -31,31 +31,35 @@
         <article class="prose">
           <h1>Applied Models</h1>
 <p>Applied Models is a public home for empirical science and applied research on generative models.</p>
-<p>The work is direct: choose a model, frame a falsifiable hypothesis, run a real experiment, publish what happened.</p>
+<p>The most important questions about generative models are still open. This is the work of finding out — direction by direction, experiment by experiment.</p>
 <h2>Research Directions</h2>
-<p><strong>Fundamentals</strong> Architecture, training dynamics, scaling behavior, and model internals studied from first principles.</p>
-<p><strong>Interpretability</strong> Mechanistic analysis of what models learn: circuits, probing, attention patterns, embedding geometry, and feature attribution.</p>
-<p><strong>Alignment Science</strong> Behavioral alignment, value consistency across contexts, safety tradeoffs, and how alignment properties shift with training.</p>
-<p><strong>Post Training</strong> Fine-tuning, instruction tuning, DPO, ORPO, distillation, and the behavioral effects of each training stage.</p>
-<p><strong>RL</strong> Reinforcement learning for language models: RLHF, GRPO, PPO, process reward models, and reasoning elicited via RL.</p>
-<p><strong>Evals</strong> Hypothesis-driven eval suites for capabilities, failure modes, and behavioral consistency. The first experiments run on Gemma.</p>
-<p><strong>Industry &amp; Enterprise</strong> How generative models perform in applied settings: retrieval, structured generation, constrained output, and real deployment patterns.</p>
-<h2>What This Project Publishes</h2>
-<ul><li>hypothesis-driven experiments with clear evaluation criteria</li><li>original articles grounded in direct implementation and measurement</li><li>Python notebooks that make experiments reproducible and executable</li></ul>
-<h2>What Matters Here</h2>
-<ul><li>evidence over commentary</li><li>original implementation over second-hand summary</li><li>reproducibility over impressiveness</li><li>steady compounding over benchmark chasing</li></ul>
+<p><strong>Fundamentals</strong> How do architecture choices and training dynamics produce the behaviors we observe at scale? Starting from model internals, not from benchmark scores.</p>
+<p><strong>Interpretability</strong> Which circuits drive specific model behaviors, and can they be precisely identified and edited? Mechanistic analysis of what models actually learn, not just what they output.</p>
+<p><strong>Alignment Science</strong> When does alignment hold under distribution shift and pressure, and how does it degrade? Behavioral consistency studied empirically across contexts.</p>
+<p><strong>Post Training</strong> What does each training stage — fine-tuning, DPO, distillation — actually change inside the model? Behavior, or internal representations?</p>
+<p><strong>RL</strong> Does RL genuinely improve reasoning, or does it optimize for the appearance of reasoning? RLHF, GRPO, and process reward models studied from outcome to mechanism.</p>
+<p><strong>Evals</strong> What would a rigorous, falsifiable eval of model capability actually require? Hypothesis-driven suites for capabilities, failure modes, and behavioral consistency. Starting with Gemma.</p>
+<p><strong>Industry &amp; Enterprise</strong> Where do retrieval-augmented generation, structured output, and constrained decoding reliably break — and what can be done about it?</p>
+<h2>Why These Questions</h2>
+<p><strong>Genuine unknowns</strong> Every experiment starts with something that doesn't have a clear answer yet — not a demonstration of what works.</p>
+<p><strong>Narrow enough to test</strong> One model, one configuration, one measurable outcome. Small scope makes real answers possible.</p>
+<p><strong>Empirical first</strong> What the model actually does under specific conditions — not what theory predicts.</p>
+<p><strong>Compounding record</strong> Seven directions, accumulating real evidence over time. The record stays public.</p>
+<h2>What Gets Published</h2>
+<p><strong>Traceable results</strong> Every finding links back to a run done here. Original implementation, not reproduced from paper.</p>
+<p><strong>Reproducible method</strong> Clear enough that someone else could replicate it with the same setup.</p>
+<p><strong>Honest failure</strong> Inconclusive runs and broken setups documented, not hidden. The record is not a highlight reel.</p>
+<p><strong>No repackaging</strong> Every claim traces to a run done here, not to someone else's paper.</p>
 <h2>Reproducibility Standard</h2>
 <p>Every released artifact should be reproducible by someone else. That means:</p>
 <ul><li>a clear method with enough detail to replicate</li><li>evaluation criteria set before running</li><li>failure modes and limitations documented</li><li>code, configs, or prompts made available</li></ul>
 <p>If it can't be reproduced, it's a note — not a release.</p>
 <h2>Behind the Work</h2>
 <p>Applied Models is led by the builder behind <a href="https://prachalabs.com">Prachalabs.com</a> and <a href="https://pracha.me">Pracha.me</a>.</p>
-<h2>Models, Datasets, and Collections</h2>
-<p>Public model assets live in the Hugging Face organization:</p>
-<ul><li><a href="https://huggingface.co/appliedomodels">appliedomodels on Hugging Face</a></li></ul>
+<h2>Models and Datasets</h2>
+<p>Public model assets: <a href="https://huggingface.co/appliedomodels">appliedomodels on Hugging Face</a></p>
 <h2>Publication Boundary</h2>
-<p>This project does not publish passive learning notes or summaries of other people's work.</p>
-<p>Every release comes from original experiments, direct implementation, and first-hand observation.</p>
+<p>Every release comes from original experiments, direct implementation, and first-hand observation. Not summaries of papers, not passive learning notes.</p>
         </article>
       </main>
   </div>

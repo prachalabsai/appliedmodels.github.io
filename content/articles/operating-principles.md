@@ -32,7 +32,7 @@ This keeps scope realistic and prevents work from stalling in planning.
 
 The goal is not to publish only when the result is state of the art.
 
-That bar is too expensive as a default and can freeze progress entirely.
+That bar can freeze progress entirely.
 
 What matters more:
 
