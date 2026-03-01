@@ -261,40 +261,75 @@ function renderEntryCard(entry, depth) {
 </article>`;
 }
 
-function renderHomeGlimpsePanel({ eyebrow, title, description, entries, href, linkLabel }) {
-  const featured = entries[0];
-  const secondary = entries.slice(1, 3);
+function homeActionLabel(entry) {
+  if (entry.collection === "Experiments") {
+    return "Open experiment";
+  }
 
-  const featuredHtml = featured
-    ? `<article class="glimpse-feature">
-        <p class="eyebrow">${featured.collection}</p>
-        <h3><a href="${featured.url}">${escapeHtml(featured.title)}</a></h3>
-        <p>${escapeHtml(featured.summary)}</p>
-        ${cardMeta(featured) ? `<p class="meta-line">${escapeHtml(cardMeta(featured))}</p>` : ""}
-      </article>`
-    : '<p class="empty-state">Nothing published yet.</p>';
+  if (entry.collection === "Articles") {
+    return "Read article";
+  }
 
-  const listHtml =
-    secondary.length > 0
-      ? `<ul class="glimpse-list">
-          ${secondary
-            .map(
-              (entry) => `<li>
-                <a href="${entry.url}">${escapeHtml(entry.title)}</a>
-                ${cardMeta(entry) ? `<span>${escapeHtml(cardMeta(entry))}</span>` : ""}
-              </li>`,
-            )
-            .join("\n")}
-        </ul>`
-      : "";
+  if (entry.collection === "Notebooks") {
+    return "Open notebook";
+  }
 
-  return `<section class="glimpse-panel">
-    <p class="eyebrow">${eyebrow}</p>
-    <h2>${escapeHtml(title)}</h2>
-    <p class="lede">${escapeHtml(description)}</p>
-    ${featuredHtml}
-    ${listHtml}
-    <p class="actions"><a href="${href}">${escapeHtml(linkLabel)}</a></p>
+  return "Open";
+}
+
+function renderHomeArtifactTable(entries) {
+  if (entries.length === 0) {
+    return '<p class="empty-state">Nothing is published yet.</p>';
+  }
+
+  const rows = entries
+    .map((entry) => {
+      const meta = cardMeta(entry) || "Published";
+      const typeLabel = entry.kind || entry.collection;
+      const colabLink = entry.colabUrl
+        ? `<a class="table-inline-link" href="${entry.colabUrl}" target="_blank" rel="noreferrer">Colab</a>`
+        : "";
+
+      return `<tr>
+        <td><span class="artifact-type-badge">${escapeHtml(entry.collection)}</span></td>
+        <td>
+          <a class="artifact-title-link" href="${entry.url}">${escapeHtml(entry.title)}</a>
+          <p class="artifact-subline">${escapeHtml(typeLabel)}</p>
+        </td>
+        <td class="artifact-summary-cell">${escapeHtml(entry.summary)}</td>
+        <td class="artifact-meta-cell">${escapeHtml(meta)}</td>
+        <td>
+          <div class="artifact-actions">
+            <a class="action-link action-link-compact" href="${entry.url}">${homeActionLabel(entry)}</a>
+            ${colabLink}
+          </div>
+        </td>
+      </tr>`;
+    })
+    .join("\n");
+
+  return `<section class="artifact-index">
+    <div class="artifact-index-links">
+      <a href="experiments/index.html">All experiments</a>
+      <a href="articles/index.html">All articles</a>
+      <a href="notebooks/index.html">All notebooks</a>
+    </div>
+    <div class="artifact-table-wrap">
+      <table class="artifact-table">
+        <thead>
+          <tr>
+            <th scope="col">Type</th>
+            <th scope="col">Title</th>
+            <th scope="col">Reference</th>
+            <th scope="col">Meta</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${rows}
+        </tbody>
+      </table>
+    </div>
   </section>`;
 }
 
@@ -503,32 +538,10 @@ async function writeNotebookPages(entries) {
 }
 
 async function buildHomePage(experiments, articles, notebooks) {
-  const experimentsGlimpse = renderHomeGlimpsePanel({
-    eyebrow: "Recent Experiments",
-    title: "Small, testable experiments.",
-    description: "Focused runs built around one clear hypothesis and a few concrete questions.",
-    entries: experiments.slice(0, 3),
-    href: "experiments/index.html",
-    linkLabel: "View all experiments",
-  });
-
-  const articlesGlimpse = renderHomeGlimpsePanel({
-    eyebrow: "Recent Articles",
-    title: "Writeups from the work itself.",
-    description: "Short, direct records of what was tested, what happened, and what it means.",
-    entries: articles.slice(0, 3),
-    href: "articles/index.html",
-    linkLabel: "View all articles",
-  });
-
-  const notebooksGlimpse = renderHomeGlimpsePanel({
-    eyebrow: "Recent Notebooks",
-    title: "Python notebooks in progress.",
-    description: "Executable notebooks for baselines, implementation details, and measurement.",
-    entries: notebooks.slice(0, 3),
-    href: "notebooks/index.html",
-    linkLabel: "View all notebooks",
-  });
+  const recentArtifacts = [...experiments, ...articles, ...notebooks]
+    .sort(compareByDateDesc)
+    .slice(0, 8);
+  const artifactTable = renderHomeArtifactTable(recentArtifacts);
 
   const body = `<main>
     <section class="hero">
@@ -600,15 +613,11 @@ async function buildHomePage(experiments, articles, notebooks) {
     </section>
 
     <section class="section-head">
-      <p class="eyebrow">Recent Work</p>
-      <h2>A quick glimpse of what is being built now.</h2>
-      <p class="lede">The homepage stays light. Use it to scan the latest work, then go deeper from there.</p>
+      <p class="eyebrow">Artifact Index</p>
+      <h2>Recent artifacts in one compact table.</h2>
+      <p class="lede">Use this as the quick reference layer: scan the latest published work, then open the artifact you need.</p>
     </section>
-    <section class="glimpse-grid">
-      ${experimentsGlimpse}
-      ${articlesGlimpse}
-      ${notebooksGlimpse}
-    </section>
+    ${artifactTable}
   </main>`;
 
   await fs.writeFile(

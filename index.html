@@ -89,51 +89,77 @@
     </section>
 
     <section class="section-head">
-      <p class="eyebrow">Recent Work</p>
-      <h2>A quick glimpse of what is being built now.</h2>
-      <p class="lede">The homepage stays light. Use it to scan the latest work, then go deeper from there.</p>
+      <p class="eyebrow">Artifact Index</p>
+      <h2>Recent artifacts in one compact table.</h2>
+      <p class="lede">Use this as the quick reference layer: scan the latest published work, then open the artifact you need.</p>
     </section>
-    <section class="glimpse-grid">
-      <section class="glimpse-panel">
-    <p class="eyebrow">Recent Experiments</p>
-    <h2>Small, testable experiments.</h2>
-    <p class="lede">Focused runs built around one clear hypothesis and a few concrete questions.</p>
-    <article class="glimpse-feature">
-        <p class="eyebrow">Experiments</p>
-        <h3><a href="experiments/0001-agentic-evals.html">Experiment 0001: Agentic Evals for Small Models</a></h3>
-        <p>A compact evaluation suite for planning, tool choice, self-correction, and distractor resistance in smaller open models.</p>
-        <p class="meta-line">2026-02-28 · In progress · Eval suite</p>
-      </article>
-    
-    <p class="actions"><a href="experiments/index.html">View all experiments</a></p>
+    <section class="artifact-index">
+    <div class="artifact-index-links">
+      <a href="experiments/index.html">All experiments</a>
+      <a href="articles/index.html">All articles</a>
+      <a href="notebooks/index.html">All notebooks</a>
+    </div>
+    <div class="artifact-table-wrap">
+      <table class="artifact-table">
+        <thead>
+          <tr>
+            <th scope="col">Type</th>
+            <th scope="col">Title</th>
+            <th scope="col">Reference</th>
+            <th scope="col">Meta</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+        <td><span class="artifact-type-badge">Notebooks</span></td>
+        <td>
+          <a class="artifact-title-link" href="notebooks/0001-agentic-evals-baseline.html">0001 Agentic Evals Baseline Notebook</a>
+          <p class="artifact-subline">Python notebook</p>
+        </td>
+        <td class="artifact-summary-cell">A Python notebook for prompt fixtures, scoring checks, and baseline observations for the first experiment.</td>
+        <td class="artifact-meta-cell">2026-02-28 · Python notebook</td>
+        <td>
+          <div class="artifact-actions">
+            <a class="action-link action-link-compact" href="notebooks/0001-agentic-evals-baseline.html">Open notebook</a>
+            <a class="table-inline-link" href="https://colab.research.google.com/github/prachalabsai/appliedmodels.github.io/blob/main/notebooks/0001-agentic-evals-baseline.ipynb" target="_blank" rel="noreferrer">Colab</a>
+          </div>
+        </td>
+      </tr>
+<tr>
+        <td><span class="artifact-type-badge">Experiments</span></td>
+        <td>
+          <a class="artifact-title-link" href="experiments/0001-agentic-evals.html">Experiment 0001: Agentic Evals for Small Models</a>
+          <p class="artifact-subline">Eval suite</p>
+        </td>
+        <td class="artifact-summary-cell">A compact evaluation suite for planning, tool choice, self-correction, and distractor resistance in smaller open models.</td>
+        <td class="artifact-meta-cell">2026-02-28 · In progress · Eval suite</td>
+        <td>
+          <div class="artifact-actions">
+            <a class="action-link action-link-compact" href="experiments/0001-agentic-evals.html">Open experiment</a>
+            
+          </div>
+        </td>
+      </tr>
+<tr>
+        <td><span class="artifact-type-badge">Articles</span></td>
+        <td>
+          <a class="artifact-title-link" href="articles/operating-principles.html">Operating Principles for Applied Models</a>
+          <p class="artifact-subline">Working note</p>
+        </td>
+        <td class="artifact-summary-cell">The project runs on small, hypothesis-driven experiments, original records of work, and continuous forward motion instead of SOTA chasing.</td>
+        <td class="artifact-meta-cell">2026-02-28 · Working note</td>
+        <td>
+          <div class="artifact-actions">
+            <a class="action-link action-link-compact" href="articles/operating-principles.html">Read article</a>
+            
+          </div>
+        </td>
+      </tr>
+        </tbody>
+      </table>
+    </div>
   </section>
-      <section class="glimpse-panel">
-    <p class="eyebrow">Recent Articles</p>
-    <h2>Writeups from the work itself.</h2>
-    <p class="lede">Short, direct records of what was tested, what happened, and what it means.</p>
-    <article class="glimpse-feature">
-        <p class="eyebrow">Articles</p>
-        <h3><a href="articles/operating-principles.html">Operating Principles for Applied Models</a></h3>
-        <p>The project runs on small, hypothesis-driven experiments, original records of work, and continuous forward motion instead of SOTA chasing.</p>
-        <p class="meta-line">2026-02-28 · Working note</p>
-      </article>
-    
-    <p class="actions"><a href="articles/index.html">View all articles</a></p>
-  </section>
-      <section class="glimpse-panel">
-    <p class="eyebrow">Recent Notebooks</p>
-    <h2>Python notebooks in progress.</h2>
-    <p class="lede">Executable notebooks for baselines, implementation details, and measurement.</p>
-    <article class="glimpse-feature">
-        <p class="eyebrow">Notebooks</p>
-        <h3><a href="notebooks/0001-agentic-evals-baseline.html">0001 Agentic Evals Baseline Notebook</a></h3>
-        <p>A Python notebook for prompt fixtures, scoring checks, and baseline observations for the first experiment.</p>
-        <p class="meta-line">2026-02-28 · Python notebook</p>
-      </article>
-    
-    <p class="actions"><a href="notebooks/index.html">View all notebooks</a></p>
-  </section>
-    </section>
   </main>
   </div>
 </body>
