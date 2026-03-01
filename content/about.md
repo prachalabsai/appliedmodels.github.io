@@ -6,17 +6,26 @@ The work is direct: choose a model, frame a falsifiable hypothesis, run a real e
 
 ## Research Directions
 
-**Alignment Science & Interpretability**
-Probing model behavior, tracing how post-training shapes alignment, and studying model biology and dynamics — what happens inside the model across layers, training stages, and capability transitions.
+**Fundamentals**
+Architecture, training dynamics, scaling behavior, and model internals studied from first principles.
 
-**Model Anatomy & Components**
-Structural analysis of generative models: attention mechanisms, embedding geometry, activation patterns, and how architectural components compose into observed behavior.
+**Interpretability**
+Mechanistic analysis of what models learn: circuits, probing, attention patterns, embedding geometry, and feature attribution.
 
-**Evaluation**
-Hypothesis-driven eval suites for capabilities, failure modes, and behavioral consistency. The first experiments run on Gemma — small, open, and well-suited for controlled work.
+**Alignment Science**
+Behavioral alignment, value consistency across contexts, safety tradeoffs, and how alignment properties shift with training.
 
-**Industry & Creative Applications**
-How generative models perform in applied settings: retrieval, structured generation, constrained output, and tasks with measurable real-world outcomes.
+**Post Training**
+Fine-tuning, instruction tuning, DPO, ORPO, distillation, and the behavioral effects of each training stage.
+
+**RL**
+Reinforcement learning for language models: RLHF, GRPO, PPO, process reward models, and reasoning elicited via RL.
+
+**Evals**
+Hypothesis-driven eval suites for capabilities, failure modes, and behavioral consistency. The first experiments run on Gemma.
+
+**Industry & Enterprise**
+How generative models perform in applied settings: retrieval, structured generation, constrained output, and real deployment patterns.
 
 ## What This Project Publishes
 
