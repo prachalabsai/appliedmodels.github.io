@@ -45,6 +45,12 @@ Applied Models is led by the person behind:
 - [Prachalabs.com](https://prachalabs.com)
 - [Pracha.me](https://pracha.me)
 
+## Models, Datasets, and Collections
+
+Most public model assets for this project live in the Hugging Face organization:
+
+- [appliedomodels on Hugging Face](https://huggingface.co/appliedomodels)
+
 ## Editorial Boundary
 
 This site is not for passive learning notes or second-hand summaries of other people's work.

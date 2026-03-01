@@ -12,6 +12,7 @@ const notebooksDir = path.join(rootDir, "notebooks");
 const aboutSourcePath = path.join(contentDir, "about.md");
 const repositorySlug = "prachalabsai/appliedmodels.github.io";
 const repositoryBranch = "main";
+const huggingFaceOrgUrl = "https://huggingface.co/appliedomodels";
 
 function escapeHtml(value) {
   return value
@@ -228,6 +229,7 @@ function pageLayout({ title, description, body, depth, active }) {
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>${pageTitle}</title>
   <meta name="description" content="${escapeHtml(description)}" />
+  <link rel="icon" href="${prefix}assets/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="${prefix}assets/style.css" />
 </head>
 <body>
@@ -313,6 +315,7 @@ function renderHomeArtifactTable(entries) {
       <a href="experiments/index.html">All experiments</a>
       <a href="articles/index.html">All articles</a>
       <a href="notebooks/index.html">All notebooks</a>
+      <a href="${huggingFaceOrgUrl}" target="_blank" rel="noreferrer">Hugging Face org</a>
     </div>
     <div class="artifact-table-wrap">
       <table class="artifact-table">
@@ -572,6 +575,10 @@ async function buildHomePage(experiments, articles, notebooks) {
               <li><strong>Artifacts</strong><span>Experiments, articles, and Python notebooks.</span></li>
               <li><strong>Standard</strong><span>Original findings, even when the result is partial.</span></li>
             </ul>
+            <p class="hero-note-link">
+              External assets:
+              <a href="${huggingFaceOrgUrl}" target="_blank" rel="noreferrer">Hugging Face organization</a>
+            </p>
           </section>
           <section class="hero-note hero-note-strong">
             <p class="eyebrow">Release Pattern</p>
