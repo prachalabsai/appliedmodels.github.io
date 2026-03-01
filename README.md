@@ -41,8 +41,13 @@ If it can’t be reproduced, it’s a note—not a release.
 
 ## Where to find things
 
-- **Website:** `index.html`
-- **Experiment logs:** `/experiments/`
+- **Published homepage:** `index.html`
+- **Published experiment pages:** `/experiments/`
+- **Published article pages:** `/articles/`
+- **Published notebook pages:** `/notebooks/`
+- **Content sources:** `/content/experiments/` and `/content/articles/`
+- **Python notebooks:** `/notebooks/*.ipynb`
+- **Build script:** `scripts/build.mjs`
 - **Static assets:** `/assets/`
 
 ---
@@ -67,10 +72,16 @@ Deliverable (v0.1):
 
 ## Local dev
 
+Build the site:
+
+```bash
+npm run build
+```
+
 Preview locally:
 
 ```bash
-python -m http.server 8080
+npm run preview
 # open http://localhost:8080
 ```
 

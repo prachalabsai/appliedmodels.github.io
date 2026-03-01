@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Experiment 0001: Agentic Evals for Small Models | Applied Models</title>
+  <meta name="description" content="A compact evaluation suite for planning, tool choice, self-correction, and distractor resistance in smaller open models." />
+  <link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-nav">
+      <a class="brand" href="../index.html">Applied Models</a>
+      <nav>
+        <a  href="../index.html">Home</a>
+        <a class="active" href="../experiments/index.html">Experiments</a>
+        <a  href="../articles/index.html">Articles</a>
+        <a  href="../notebooks/index.html">Notebooks</a>
+        <a  href="../about.html">About</a>
+      </nav>
+    </header>
+    <main class="document-page">
+      <section class="section-head">
+        <p class="eyebrow">Experiments</p>
+        <h1>Experiment 0001: Agentic Evals for Small Models</h1>
+        <p class="lede">A compact evaluation suite for planning, tool choice, self-correction, and distractor resistance in smaller open models.</p>
+        <p class="meta-line">2026-02-28 · In progress · Eval suite</p>
+      </section>
+      <article class="prose">
+        <h2>Hypothesis</h2>
+<p>Small open models can demonstrate useful agentic behavior if the evaluation tasks are tightly scoped, scored clearly, and designed to expose specific failure modes instead of vague "agent quality."</p>
+<h2>Key Questions</h2>
+<ul><li>Can the model maintain a multi-step plan without dropping steps?</li><li>Can it choose the right tool when the prompt presents multiple options?</li><li>Can it recover after an explicit mistake or contradiction?</li><li>Can it ignore distractor instructions that are plausible but irrelevant?</li></ul>
+<h2>Why This Experiment</h2>
+<p>This is the first Applied Models experiment because it is tractable, testable, and cheap enough to iterate on quickly.</p>
+<p>It is also a strong fit for the project standard:</p>
+<ul><li>one hypothesis</li><li>a few concrete questions</li><li>one small experiment</li><li>one public record of the work</li></ul>
+<h2>Initial Design</h2>
+<p>The first pass is intentionally small.</p>
+<ol><li>Build a prompt set with controlled tasks.</li><li>Define scoring rules that can be applied consistently.</li><li>Run a few small open models on the same prompts.</li><li>Record where the models fail, not just where they succeed.</li></ol>
+<h2>What Counts as Output</h2>
+<p>The v0.1 output for this experiment is:</p>
+<ul><li>prompt cases</li><li>scoring rules</li><li>baseline runs</li><li>failure notes</li><li>one Python notebook for sanity checks and baseline comparison</li></ul>
+<h2>Constraints</h2>
+<ul><li>Keep the compute budget low.</li><li>Prefer transparent scoring over complicated automation.</li><li>Optimize for reproducibility, not benchmark theater.</li></ul>
+<h2>Current Status</h2>
+<p>This is still being shaped. The value of publishing it now is to establish the operating loop and keep the work in motion.</p>
+      </article>
+    </main>
+  </div>
+</body>
+</html>

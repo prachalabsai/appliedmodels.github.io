@@ -1,0 +1,9 @@
+{
+  "name": "appliedmodels-co",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "preview": "python3 -m http.server 8080"
+  }
+}
