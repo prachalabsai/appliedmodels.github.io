@@ -167,10 +167,24 @@ main {
   color: var(--muted);
   font-size: 1rem;
   line-height: 1.78;
+  text-align: justify;
+  hyphens: auto;
 }
 
 .hero .lede {
   max-width: 54ch;
+}
+
+.hero-statement {
+  margin: 0;
+  max-width: 54ch;
+  color: var(--ink);
+  font-size: 1rem;
+  line-height: 1.82;
+  text-align: justify;
+  hyphens: auto;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--rule);
 }
 
 .hero-actions {
@@ -368,6 +382,8 @@ main {
   color: var(--muted);
   font-size: 0.9rem;
   line-height: 1.6;
+  text-align: justify;
+  hyphens: auto;
 }
 
 /* ─── Section head ───────────────────────────────────────── */
@@ -483,6 +499,8 @@ main {
 .artifact-summary-cell {
   min-width: 260px;
   font-size: 0.9rem;
+  text-align: justify;
+  hyphens: auto;
 }
 
 .artifact-meta-cell {
@@ -532,6 +550,8 @@ main {
   color: var(--muted);
   line-height: 1.65;
   font-size: 0.95rem;
+  text-align: justify;
+  hyphens: auto;
 }
 
 .meta-line {
@@ -583,6 +603,8 @@ main {
 .prose blockquote {
   color: var(--ink);
   line-height: 1.78;
+  text-align: justify;
+  hyphens: auto;
 }
 
 .prose ul,
