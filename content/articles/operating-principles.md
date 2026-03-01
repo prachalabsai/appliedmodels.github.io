@@ -10,29 +10,29 @@ Applied Models publishes original work only.
 
 That means:
 
-- experiments this lab designed and ran
+- experiments designed and run here
 - implementations built directly from the problem
-- observations made from first-hand runs
+- observations from first-hand runs
 - failures recorded honestly
 
-This lab does not summarize papers, repackage blog posts, or publish passive study notes.
+Not summaries of papers, not repackaged blog posts, not passive study notes.
 
 ## The Unit of Progress
 
 The smallest releasable unit of work is:
 
-1. one falsifiable hypothesis
+1. one hypothesis
 2. a set of concrete evaluation questions
 3. one focused experiment designed to test it
 4. one honest record of what happened
 
-This unit keeps scope realistic and prevents work from stalling in indefinite planning.
+This keeps scope realistic and prevents work from stalling in planning.
 
-## Independence Over Prestige
+## Progress Over Prestige
 
 The goal is not to publish only when the result is state of the art.
 
-For an independent lab, that bar is the wrong default. It is expensive, slow, and often freezes progress entirely.
+That bar is too expensive as a default and can freeze progress entirely.
 
 What matters more:
 
@@ -41,17 +41,15 @@ What matters more:
 - the result is recorded without spin
 - the work builds on itself over time
 
-A lab that only publishes wins is not keeping an honest record.
-
 ## Failure Is Part of the Record
 
-A failed experiment can still be valuable if it tells the truth.
+A failed experiment can still be useful if it tells the truth.
 
-An inconclusive run, a weak baseline, or a broken setup reveals:
+An inconclusive run, a weak baseline, or a broken setup can reveal:
 
 - a bad prior assumption
 - a flaw in the experimental design
 - a behavior the model does not have
 - a better direction for the next experiment
 
-The research record is not a highlight reel. It is a log of what actually happened.
+The record is not a highlight reel. It is a log of what actually happened.

@@ -616,7 +616,7 @@ async function buildHomePage(experiments, articles, notebooks) {
         <p class="eyebrow">Publication Boundary</p>
         <ul class="stack-list">
           <li><strong>No survey pieces</strong><span>Published work comes from direct implementation, not literature review.</span></li>
-          <li><strong>No second-hand summaries</strong><span>Don&apos;t repackage other researchers&apos; results as findings.</span></li>
+          <li><strong>No second-hand summaries</strong><span>Don&apos;t repackage others&apos; results as findings.</span></li>
           <li><strong>Original only</strong><span>Every claim traces to an experiment run here.</span></li>
           <li><strong>Keep compounding</strong><span>Forward progress beats chasing benchmark headlines.</span></li>
         </ul>
