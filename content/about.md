@@ -60,7 +60,7 @@ If it can't be reproduced, it's a note — not a release.
 
 ## Behind the Work
 
-Applied Models is led by the builder behind [Prachalabs.com](https://prachalabs.com) and [Pracha.me](https://pracha.me).
+Applied Models is a personal initiative by the builder behind [Prachalabs.com](https://prachalabs.com) and [Pracha.me](https://pracha.me).
 
 ## Models and Datasets
 

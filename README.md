@@ -2,19 +2,15 @@
 
 **Empirical science & applied research on generative models.**
 
-This repo powers the GitHub Pages site at **appliedmodels.co** by Pracha Labs.
+This repo powers the GitHub Pages site at **appliedmodels.co**.
 
 ---
 
 ## What is Applied Models?
 
-Applied Models is a public lab focused on **evidence-first work** on generative models (LLMs, VLMs, multimodal, agentic systems).
+Applied Models is a personal initiative for evidence-first work on generative models (LLMs, VLMs, multimodal, agentic systems).
 
-The vibe is simple:
-
-**Measure → Understand → Improve → Ship (with receipts).**
-
-We publish:
+Published work covers:
 - **Empirical analysis & benchmarking** (eval suites, comparisons, ablations)
 - **Interpretability & alignment** (probing, behavior shifts, safety tradeoffs)
 - **Post-training & fine-tuning** (cost-effective recipes, DPO/ORPO/LoRA/GRPO, Distillation, Model Dynamics & Algebra)
